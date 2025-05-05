@@ -15,7 +15,7 @@ class textin (BaseModel):
 
 @app.get("/")
 def Home():
-    return model.predict(cv.transform(["nigga"]).toarray())
+    return model.predict(cv.transform(["You are Awful"]).toarray())
 @app.post("/predict")
 def predict(data:textin):
     prediction=model.predict(cv.transform([data.text]).toarray())
